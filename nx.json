@@ -27,12 +27,21 @@
     ]
   },
   "projects": {
+    "feature-search": {
+      "tags": []
+    },
+    "feature-upgrade": {
+      "tags": []
+    },
     "flight-app": {
       "tags": []
     },
     "flight-app-e2e": {
       "tags": [],
       "implicitDependencies": ["flight-app"]
+    },
+    "flight-data": {
+      "tags": []
     }
   }
 }

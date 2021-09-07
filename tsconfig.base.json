@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@my-project/feature-search": ["libs/feature-search/src/index.ts"],
+      "@my-project/feature-upgrade": ["libs/feature-upgrade/src/index.ts"],
+      "@my-project/flight-data": ["libs/flight-data/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

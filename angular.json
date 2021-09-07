@@ -1,6 +1,56 @@
 {
   "version": 1,
   "projects": {
+    "feature-search": {
+      "projectType": "library",
+      "root": "libs/feature-search",
+      "sourceRoot": "libs/feature-search/src",
+      "prefix": "my-project",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature-search"],
+          "options": {
+            "jestConfig": "libs/feature-search/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature-search/src/**/*.ts",
+              "libs/feature-search/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "feature-upgrade": {
+      "projectType": "library",
+      "root": "libs/feature-upgrade",
+      "sourceRoot": "libs/feature-upgrade/src",
+      "prefix": "my-project",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature-upgrade"],
+          "options": {
+            "jestConfig": "libs/feature-upgrade/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature-upgrade/src/**/*.ts",
+              "libs/feature-upgrade/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "flight-app": {
       "projectType": "application",
       "root": "apps/flight-app",
@@ -116,6 +166,31 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/flight-app-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "flight-data": {
+      "projectType": "library",
+      "root": "libs/flight-data",
+      "sourceRoot": "libs/flight-data/src",
+      "prefix": "my-project",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/flight-data"],
+          "options": {
+            "jestConfig": "libs/flight-data/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/flight-data/src/**/*.ts",
+              "libs/flight-data/src/**/*.html"
+            ]
           }
         }
       }
